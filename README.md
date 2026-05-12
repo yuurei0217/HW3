@@ -28,14 +28,14 @@
 pip install -r requirements.txt
 ```
 
-**2. 執行主程式 (執行靜態分析與圖表輸出)**
+**2. 執行靜態分析與圖表輸出 (Option A)**
 ```bash
-python 4112056003_hw3.py
+python static_analysis.py
 ```
 *(執行後會在 `output/` 資料夾生成模型檔案與預測圖表)*
 
-**3. 啟動 Streamlit 互動式 Web App**
+**3. 啟動 Streamlit 互動式 Web App (Option B - 主程式)**
 ```bash
-streamlit run app.py
+streamlit run 4112056003_hw3.py
 ```
 *(網頁啟動後將在瀏覽器 `http://localhost:8501/` 開啟)*
