@@ -107,12 +107,20 @@ col4.metric("R² Score", f"{r2:.4f}")
 # 預測圖
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
-# Actual vs Predicted
-results_df = pd.DataFrame({'Actual': y_test.values, 'Predicted': y_pred})
+# Actual vs Predicted with 95% Prediction Interval
+# 使用 1.96 * RMSE 作為 95% 預測區間的近似值
+pi_margin = 1.96 * rmse
+results_df = pd.DataFrame({
+    'Actual': y_test.values, 
+    'Predicted': y_pred,
+    'Lower': y_pred - pi_margin,
+    'Upper': y_pred + pi_margin
+})
 results_df = results_df.sort_values(by='Actual').reset_index(drop=True)
 
 ax1.plot(results_df.index, results_df['Actual'], 'o', color='darkred', label='Actual', alpha=0.6)
 ax1.plot(results_df.index, results_df['Predicted'], '-', color='royalblue', label='Predicted')
+ax1.fill_between(results_df.index, results_df['Lower'], results_df['Upper'], color='royalblue', alpha=0.15, label='95% Prediction Interval')
 ax1.set_title('Actual vs Predicted Quality')
 ax1.set_xlabel('Samples (Sorted)')
 ax1.set_ylabel('Quality')
