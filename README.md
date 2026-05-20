@@ -8,6 +8,9 @@
 3. **專業的殘差分析視覺化**：不只輸出常見的實際 vs. 預測對比圖，更繪製了帶有 LOWESS 平滑線的殘差圖 (Residual Plot)，有效檢驗模型誤差分佈。
 4. **即時互動 Web App**：將模型部署為 Streamlit 應用程式，讓使用者能透過介面拉桿即時調整 11 項化學成分，獲得模型對於紅酒品質的即時評分預測。
 
+## 📚 NotebookLM 研究與文獻摘要
+透過 NotebookLM 查詢與整理網路上關於紅酒品質預測（Wine Quality Prediction）的主流解法後，可以發現許多研究與 Kaggle 專案除了使用多元線性回歸（Multiple Linear Regression）外，也大量採用 Random Forest、Gradient Boosting 與 XGBoost 等機器學習方法進行分析。研究指出，酒精濃度（alcohol）、揮發性酸度（volatile acidity）、硫酸鹽（sulphates）與檸檬酸（citric acid）等特徵，通常對紅酒品質具有較顯著影響。相較於線性回歸模型，樹狀集成模型能更有效捕捉資料中的非線性關係，因此在預測準確率與 R² 指標上通常有較佳表現。然而，多元線性回歸具有模型較容易解釋、可清楚觀察各特徵影響程度等優點，因此仍相當適合作為基礎分析模型，並符合本次課程多元線性回歸分析的學習目標。
+
 ## 📊 CRISP-DM 流程摘要
 
 1. **Business Understanding (商業理解)**: 自動化紅酒品質預測，協助釀酒師洞察關鍵化學成分並優化釀造配方。
