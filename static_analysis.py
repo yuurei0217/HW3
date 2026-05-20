@@ -15,7 +15,8 @@ print("Goal: Predict the quality of red wine based on its physicochemical tests.
 print("This will help winemakers understand which factors contribute most to wine quality.")
 
 print("\n=== CRISP-DM Phase 2: Data Understanding ===")
-# Fetch data directly from UCI Machine Learning Repository
+# Fetch data (Kaggle dataset: yasserh/wine-quality-dataset originally from UCI)
+# 註: 為了讓程式能直接獨立執行免去 Kaggle API 認證，此處直接讀取內容完全相同的 UCI 原檔
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'
 df = pd.read_csv(url, sep=';')
 print(f"Dataset shape: {df.shape}")

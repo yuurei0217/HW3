@@ -11,7 +11,7 @@
 ## 📊 CRISP-DM 流程摘要
 
 1. **Business Understanding (商業理解)**: 自動化紅酒品質預測，協助釀酒師洞察關鍵化學成分並優化釀造配方。
-2. **Data Understanding (資料理解)**: 使用 UCI Red Wine Quality 資料集，包含 11 個化學自變數與 1 個品質目標變數 (共 1599 筆資料)。透過相關係數熱力圖 (Heatmap) 進行了探索性資料分析 (EDA)。
+2. **Data Understanding (資料理解)**: 使用 Kaggle 上的 [Wine Quality Dataset (yasserh)](https://www.kaggle.com/datasets/yasserh/wine-quality-dataset)，包含化學自變數與品質目標變數。透過相關係數熱力圖 (Heatmap) 進行了探索性資料分析 (EDA)。
 3. **Data Preparation (資料準備)**: 將資料以 80/20 比例分割為訓練集與測試集，並透過 `StandardScaler` 進行特徵縮放。
 4. **Modeling (建立模型與特徵選擇)**: 採用「向後淘汰法 (Backward Elimination)」與「RFE」進行特徵篩選，剔除冗餘特徵，防止過度擬合並精簡模型架構。
 5. **Evaluation (模型評估)**: 

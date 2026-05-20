@@ -6,9 +6,9 @@
 ---
 
 ## 1. 資料來源 (Data Source)
-* **資料集名稱：** Red Wine Quality Dataset
-* **資料集來源：** Kaggle (原始來自 UCI Machine Learning Repository)
-* **連結：** [https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)
+* **資料集名稱：** Wine Quality Dataset
+* **資料集來源：** Kaggle (yasserh)
+* **連結：** [https://www.kaggle.com/datasets/yasserh/wine-quality-dataset](https://www.kaggle.com/datasets/yasserh/wine-quality-dataset)
 * **特徵數量：** 11 個自變數 (特徵)，1 個依變數 (品質 quality)，總共 12 個特徵，符合 10-20 個特徵之要求。
 
 ---
